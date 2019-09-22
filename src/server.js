@@ -10,7 +10,13 @@ mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: tr
 // Iniciando o App
 const morgan = require('morgan');
 require('./app/models/TaskModel');
+const healthCheckEndpoint = require('health-check-endpoint');
 const app = require('./app');
+
+// HealthCheck
+const responseHealthCheck = { version: 3 };
+
+healthCheckEndpoint(app)(responseHealthCheck);
 
 // Error Handler
 app.use(morgan('dev'));
