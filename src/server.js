@@ -5,9 +5,7 @@ require('./app/models/TaskModel');
 const apiMetrics = require('prometheus-api-metrics');
 
 // Iniciando o DB
-
-mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true });
-console.log(process.env.DB)
+setTimeout(mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true }), 3000);
 
 // Iniciando o App
 
