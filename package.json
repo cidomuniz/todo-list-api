@@ -1,38 +1,37 @@
 {
-  "name": "todo-list-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/server.js",
-  "scripts": {
-    "test": "NODE_ENV=test jest --detectOpenHandles",
-    "start": "node ./src/server.js",
-    "dev": "nodemon --ignore __tests__"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@shelf/jest-mongodb": "^1.1.1",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.17.0",
-    "jest": "^24.9.0",
-    "mongodb": "^3.3.2",
-    "nodemon": "^1.19.2",
-    "supertest": "^4.0.2"
-  },
-  "dependencies": {
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1",
-    "mongo-healthcheck": "^2.0.1",
-    "mongoose": "^5.7.1",
-    "mongoose-error-handler": "^1.0.0",
-    "morgan": "^1.9.1",
-    "prom-client": "^11.5.3",
-    "prometheus-api-metrics": "^2.2.3",
-    "win-node-env": "^0.4.0"
-  },
-  "jest": {
-    "setupFilesAfterEnv": "./__tests__/setup.js"
-  }
+    "name": "todo-list-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src/server.js",
+    "scripts": {
+        "test": "NODE_ENV=test jest --detectOpenHandles",
+        "start": "node ./src/server.js",
+        "dev": "nodemon --ignore __tests__"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@shelf/jest-mongodb": "^1.1.1",
+        "eslint": "^6.4.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^22.17.0",
+        "jest": "^24.9.0",
+        "mongodb": "^3.3.2",
+        "nodemon": "^1.19.2",
+        "supertest": "^4.0.2"
+    },
+    "dependencies": {
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "mongo-healthcheck": "^2.0.1",
+        "mongoose": "^5.7.1",
+        "mongoose-error-handler": "^1.0.0",
+        "morgan": "^1.9.1",
+        "prom-client": "^11.5.3",
+        "prometheus-api-metrics": "^2.2.3"
+    },
+    "jest": {
+        "setupFilesAfterEnv": "./__tests__/setup.js"
+    }
 }

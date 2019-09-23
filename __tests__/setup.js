@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-require('dotenv').config({
-  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
-});
+require('dotenv').config();
 
-beforeAll((done) => mongoose.connect(process.env.DB, {
-  useNewUrlParser: true, useUnifiedTopology: true,
+beforeAll((done) => mongoose.connect(process.env.DBTEST, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 }, done));
 afterAll((done) => mongoose.connection.dropDatabase(done));

@@ -8,7 +8,11 @@ services:
   app:
     build: .
     command: npm start
+    environment:
+        - DB=${DB}
+        - PORT=${PORT}
+        - HOST=${HOST}
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/app
+      - ./usr/app
