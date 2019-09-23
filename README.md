@@ -1,6 +1,6 @@
 # todo-list-api
 
-Node REST api using [Express](hhttps://github.com/expressjs/express) framework and [Mongoose](https://github.com/Automattic/mongoose) ODM.
+Node REST api using [Express](https://github.com/expressjs/express) framework and [Mongoose](https://github.com/Automattic/mongoose) ODM.
 
 
 ## Requirements
