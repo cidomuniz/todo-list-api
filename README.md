@@ -11,17 +11,7 @@ Node.js 6.x, Docker, Docker-Compose
 npm install
 ```
 
-## Run Build
-```
-npm run build
-```
-
 ## Run Database(MongoContainer)
-If you don't have mongo image instaled on your system
-```
-docker pull mongo
-```
-then
 ```
 docker-compose up -d  mongo
 ```
@@ -31,7 +21,7 @@ docker-compose up -d  mongo
 npm test
 ```
 
-## Run App (Dev mode)
+## Run App (Dev mode / Nodemon)
 ```
 npm run dev
 ```
