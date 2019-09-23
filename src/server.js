@@ -1,22 +1,21 @@
 require('dotenv').config({
   path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
 });
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+require('./app/models/TaskModel');
+const apiMetrics = require('prometheus-api-metrics');
 
 // Iniciando o DB
-const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Iniciando o App
-const morgan = require('morgan');
-require('./app/models/TaskModel');
-const healthCheckEndpoint = require('health-check-endpoint');
+
 const app = require('./app');
 
-// HealthCheck
-const responseHealthCheck = { version: 3 };
-
-healthCheckEndpoint(app)(responseHealthCheck);
+// Api metrics
+app.use(apiMetrics());
 
 // Error Handler
 app.use(morgan('dev'));

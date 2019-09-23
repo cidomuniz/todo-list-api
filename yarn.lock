@@ -2269,11 +2269,6 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-health-check-endpoint@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/health-check-endpoint/-/health-check-endpoint-1.0.1.tgz#ef173d6008855d7c52596b9bfe9c3707975ee144"
-  integrity sha512-86e5CoTzvJmh4F3OUPgEXMh/wKDnjqab1cUArmXFsxQf2840Jpevep7c6LnWiiSJMJ5Ipvm+5+K+/PmfEjJX+Q==
-
 homedir-polyfill@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/homedir-polyfill/-/homedir-polyfill-1.0.3.tgz#743298cef4e5af3e194161fbadcc2151d3a058e8"
