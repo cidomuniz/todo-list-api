@@ -3,7 +3,7 @@ const routes = require('express').Router();
 const TaskController = require('./app/controllers/TaskController');
 const healthcheck = require('./app/util/healthcheck');
 
-// Definição rotas
+// Routes definition
 routes.get('/todo', TaskController.readTasks);
 routes.get('/todo/:id', TaskController.readTask);
 routes.post('/todo', TaskController.createTask);

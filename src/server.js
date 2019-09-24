@@ -4,10 +4,10 @@ const morgan = require('morgan');
 require('./app/models/TaskModel');
 const apiMetrics = require('prometheus-api-metrics');
 
-// Iniciando o DB
+// Conect DB
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Iniciando o App
+// Start app
 
 const app = require('./app');
 
