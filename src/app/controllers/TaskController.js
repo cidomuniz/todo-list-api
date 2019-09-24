@@ -49,7 +49,7 @@ module.exports = {
     function error(err) {
       return res.status(500).json({ msg: mongooseErrorHandler.set(err, req.t) });
     }
-    await Task.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    await Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
       .then(success)
       .catch(error);
   },

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const immutableMongoose = require('mongoose-immutable-plugin');
 
 
 const TaskSchema = new mongoose.Schema({
@@ -9,6 +10,7 @@ const TaskSchema = new mongoose.Schema({
   created_date: {
     type: Date,
     default: Date.now,
+    immutable: true,
   },
   status: {
     type: String,
@@ -16,5 +18,7 @@ const TaskSchema = new mongoose.Schema({
     default: 'pending',
   },
 });
+
+TaskSchema.plugin(immutableMongoose);
 
 module.exports = mongoose.model('Task', TaskSchema);

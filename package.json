@@ -27,6 +27,7 @@
         "mongo-healthcheck": "^2.0.1",
         "mongoose": "^5.7.1",
         "mongoose-error-handler": "^1.0.0",
+        "mongoose-immutable-plugin": "^1.0.3",
         "morgan": "^1.9.1",
         "prom-client": "^11.5.3",
         "prometheus-api-metrics": "^2.2.3"
