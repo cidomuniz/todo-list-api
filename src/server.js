@@ -5,7 +5,7 @@ require('./app/models/TaskModel');
 const apiMetrics = require('prometheus-api-metrics');
 
 // Iniciando o DB
-setTimeout(mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true }), 3000);
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Iniciando o App
 
@@ -18,17 +18,17 @@ app.use(apiMetrics());
 app.use(morgan('dev'));
 
 app.use((req, res, next) => {
-    const error = new Error('Not found');
-    error.status = 404;
-    next(error);
+  const error = new Error('Not found');
+  error.status = 404;
+  next(error);
 });
 app.use((error, req, res) => {
-    res.status(error.status || 500);
-    res.json({
-        error: {
-            message: error.message,
-        },
-    });
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message,
+    },
+  });
 });
 
 app.listen(process.env.PORT, process.env.HOST);
