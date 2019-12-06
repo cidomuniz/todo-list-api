@@ -68,37 +68,3 @@ GET /healthcheck
 Return performance indicators
 GET /metrics
 ```
-
-<a name="live"></a>
-## Live test
-Hosted on AWS
-```
-Read all tasks
-curl -X GET http://3.230.73.167:3000/todo
-```
-```
-Read a task by pass the id
-curl -X GET http://3.230.73.167:3000/todo/5d898c90b8079d0011221ebd
-```
-```
-Create a task
-curl -X POST -H 'Content-Type: application/json' -d  '{"name": "Hello World"}' http://3.230.73.167:3000/todo
-```
-```
-Update a task
-curl -X PUT -H 'Content-Type: application/json' -d  '{"name": "Hello World !"}' http://3.230.73.167:3000/todo/5d898c90b8079d0011221ebd
-```
-```
-Delete a task
-curl -X DELETE http://3.230.73.167:3000/todo/{id}
-Ex:
-curl -X DELETE http://3.230.73.167:3000/todo/5d898f80b8079d0011221ebe
-```
-```
-Return current status of the components
-curl -X GET http://3.230.73.167:3000/healthcheck
-```
-```
-Return performance indicators
-curl -L GET http://3.230.73.167:3000/metrics
-```
